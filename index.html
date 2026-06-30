@@ -13,21 +13,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@500;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   *{ box-sizing:border-box; -webkit-font-smoothing:antialiased; }
-  html,body{ margin:0; padding:0; background:#0E0E0E; }
+  html,body{ margin:0; padding:0; background:#0E0E0E; overflow:hidden; height:100%; overscroll-behavior:none; }
   img{ max-width:100%; }
 </style>
 </helmet>
 
-<div style="background:#0E0E0E; color:#ffffff; font-family:'Zen Kaku Gothic New',sans-serif; overflow-x:hidden;">
+<div data-flip-root style="position:fixed; inset:0; background:#0E0E0E; color:#ffffff; font-family:'Zen Kaku Gothic New',sans-serif; perspective:2200px; touch-action:none; overflow:hidden;">
 
-  <!-- ===================== HERO ===================== -->
-  <section data-bg="base" style="min-height:100svh; padding:clamp(22px,5vw,52px) clamp(20px,5vw,60px) clamp(28px,5vw,52px); display:flex; flex-direction:column; justify-content:space-between; background:#0E0E0E;">
+  <!-- ===================== PAGE 0 · HERO ===================== -->
+  <section data-page="0" data-bg="base" style="position:absolute; inset:0; transform-origin:left center; backface-visibility:hidden; -webkit-backface-visibility:hidden; will-change:transform; overflow:hidden; box-shadow:36px 0 80px rgba(0,0,0,0.55); background:#0E0E0E; display:flex; flex-direction:column; justify-content:space-between; padding:clamp(22px,5vw,56px) clamp(20px,5vw,64px) clamp(28px,5vw,56px);">
     <div data-reveal style="display:flex; justify-content:space-between; align-items:center; font-size:clamp(11px,2.8vw,13px); letter-spacing:0.18em; color:#9a9a9a;">
       <span style="font-family:'Helvetica Neue',Arial,sans-serif; font-weight:700;">AOGU</span>
       <span>桑沢デザイン研究所夜間部VD1年</span>
     </div>
-
-    <div data-reveal data-d="70" style="">
+    <div data-reveal data-d="70">
       <div style="display:flex; gap:clamp(5px,1.5vw,8px); margin-bottom:clamp(18px,4vw,30px);">
         <span data-bar="g" style="width:clamp(40px,11vw,68px); height:clamp(8px,2vw,12px); background:#1FAF57;"></span>
         <span data-bar="r" style="width:clamp(40px,11vw,68px); height:clamp(8px,2vw,12px); background:#E0392B;"></span>
@@ -36,107 +35,135 @@
       <h1 style="margin:0; font-family:'Helvetica Neue',Arial,sans-serif; font-weight:800; font-size:clamp(58px,20vw,210px); line-height:0.82; letter-spacing:-0.055em;">AOGU</h1>
       <div style="margin-top:clamp(14px,3vw,24px); font-family:'Zen Kaku Gothic Antique',sans-serif; font-weight:900; font-size:clamp(18px,5vw,30px); letter-spacing:0.14em;">ポートフォリオ</div>
     </div>
-
     <div data-reveal data-d="140" style="display:flex; justify-content:space-between; align-items:flex-end; font-size:clamp(11px,2.8vw,13px); letter-spacing:0.16em; color:#9a9a9a;">
       <span>デザイン</span>
-      <span style="display:flex; flex-direction:column; align-items:center; gap:6px; color:#cfcfcf;">
-        <span style="font-size:clamp(9px,2.4vw,11px); letter-spacing:0.24em;">スクロール</span>
-        <span style="font-size:18px; line-height:1;">↓</span>
+      <span style="display:flex; align-items:center; gap:9px; color:#cfcfcf;">
+        <span style="font-size:18px; line-height:1;">←</span>
+        <span style="font-size:clamp(9px,2.4vw,11px); letter-spacing:0.24em;">スワイプしてめくる</span>
       </span>
     </div>
   </section>
 
-  <!-- ===================== WORK 01 ===================== -->
-  <section data-bg="alt" style="background:#141414; padding:clamp(48px,9vw,104px) clamp(20px,5vw,60px);">
-    <div style="max-width:1180px; margin:0 auto; display:flex; flex-wrap:wrap; gap:clamp(24px,4vw,52px); align-items:flex-start;">
-      <div data-reveal style="flex:1 1 300px; min-width:min(300px,100%);">
+  <!-- ===================== PAGE 1 · WORK 01 ===================== -->
+  <section data-page="1" data-bg="alt" style="position:absolute; inset:0; transform-origin:left center; backface-visibility:hidden; -webkit-backface-visibility:hidden; will-change:transform; overflow:hidden; box-shadow:36px 0 80px rgba(0,0,0,0.55); background:#141414; display:flex; align-items:center; justify-content:center; padding:clamp(36px,7vw,80px) clamp(20px,5vw,64px);">
+    <div style="width:100%; max-width:1180px; display:flex; flex-wrap:wrap; gap:clamp(22px,4vw,52px); align-items:center;">
+      <div data-reveal style="flex:1 1 290px; min-width:min(290px,100%);">
         <h2 style="margin:0; font-family:'Zen Kaku Gothic Antique',sans-serif; font-weight:900; font-size:clamp(26px,6vw,42px); line-height:1.18; letter-spacing:0.02em;">けん玉による<br>自画像</h2>
         <div style="margin-top:clamp(10px,2vw,16px); font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(12px,3vw,14px); letter-spacing:0.18em; color:#7c7c7c;">2026.04</div>
-        <p style="margin:clamp(18px,3.5vw,28px) 0 0; max-width:420px; font-size:clamp(14px,3.6vw,15px); line-height:2.05; color:#bdbdbd;">これから羽ばたいていきたいという理想の私。どこからか冷めた目で見つめる現実の自分。</p>
+        <p style="margin:clamp(16px,3vw,26px) 0 0; max-width:420px; font-size:clamp(14px,3.6vw,15px); line-height:2.05; color:#bdbdbd;">これから羽ばたいていきたいという理想の私。どこからか冷めた目で見つめる現実の自分。</p>
       </div>
-      <div data-reveal data-d="90" style="flex:1.7 1 440px; min-width:min(300px,100%); width:100%;">
-        <div style="width:100%; aspect-ratio:3/2; overflow:hidden; background:#0c0c0c;">
+      <div data-reveal data-d="90" style="flex:1.7 1 420px; min-width:min(290px,100%); width:100%;">
+        <div style="width:100%; aspect-ratio:3/2; max-height:62svh; overflow:hidden; background:#0c0c0c;">
           <img src="images/work1-kendama.jpg" alt="けん玉による自画像" style="width:100%; height:100%; object-fit:cover; object-position:center; display:block;">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== WORK 02 ===================== -->
-  <section data-bg="base" style="background:#0E0E0E; padding:clamp(48px,9vw,104px) clamp(20px,5vw,60px);">
-    <div style="max-width:1180px; margin:0 auto; display:flex; flex-wrap:wrap; gap:clamp(24px,4vw,52px); align-items:flex-start;">
-      <div data-reveal style="flex:1 1 300px; min-width:min(300px,100%);">
+  <!-- ===================== PAGE 2 · WORK 02 ===================== -->
+  <section data-page="2" data-bg="base" style="position:absolute; inset:0; transform-origin:left center; backface-visibility:hidden; -webkit-backface-visibility:hidden; will-change:transform; overflow:hidden; box-shadow:36px 0 80px rgba(0,0,0,0.55); background:#0E0E0E; display:flex; align-items:center; justify-content:center; padding:clamp(36px,7vw,80px) clamp(20px,5vw,64px);">
+    <div style="width:100%; max-width:1180px; display:flex; flex-wrap:wrap; gap:clamp(22px,4vw,52px); align-items:center;">
+      <div data-reveal style="flex:1 1 290px; min-width:min(290px,100%);">
         <h2 style="margin:0; font-family:'Zen Kaku Gothic Antique',sans-serif; font-weight:900; font-size:clamp(26px,6vw,42px); line-height:1.18; letter-spacing:0.02em;">3Dオノマトペ</h2>
         <div style="margin-top:clamp(10px,2vw,16px); font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(12px,3vw,14px); letter-spacing:0.18em; color:#7c7c7c;">2026.05</div>
-        <div style="margin-top:clamp(18px,3.5vw,28px); display:flex; flex-direction:column; gap:clamp(6px,1.5vw,10px);">
-          <span style="font-family:'Zen Kaku Gothic Antique',sans-serif; font-weight:900; font-size:clamp(14px,3.6vw,15px); letter-spacing:0.04em; color:#1FAF57; line-height:1;">ビ<span style="color:#ffffff;">ュ</span>ンビ<span style="color:#ffffff;">ュ</span>ン</span>
-          <span style="font-family:'Zen Kaku Gothic Antique',sans-serif; font-weight:900; font-size:clamp(14px,3.6vw,15px); letter-spacing:0.04em; line-height:1;"><span style="color:#E0392B;">ゴ</span><span style="color:#ffffff;">ワ</span><span style="color:#2150C8;">ゴ</span><span style="color:#ffffff;">ワ</span></span>
+        <div style="margin-top:clamp(16px,3vw,26px); display:flex; flex-direction:column; gap:clamp(6px,1.5vw,10px);">
+          <span style="font-family:'Zen Kaku Gothic Antique',sans-serif; font-weight:900; font-size:clamp(14px,3.6vw,15px); letter-spacing:0.04em; color:#1FAF57; line-height:1.6;">ビ<span style="color:#ffffff;">ュ</span>ンビ<span style="color:#ffffff;">ュ</span>ン</span>
+          <span style="font-family:'Zen Kaku Gothic Antique',sans-serif; font-weight:900; font-size:clamp(14px,3.6vw,15px); letter-spacing:0.04em; line-height:1.6;"><span style="color:#E0392B;">ゴ</span><span style="color:#ffffff;">ワ</span><span style="color:#2150C8;">ゴ</span><span style="color:#ffffff;">ワ</span></span>
         </div>
       </div>
-      <div data-reveal data-d="90" style="flex:1.7 1 440px; min-width:min(300px,100%); width:100%;">
-        <div style="width:100%; aspect-ratio:3/2; overflow:hidden; background:#1c1c1c;">
+      <div data-reveal data-d="90" style="flex:1.7 1 420px; min-width:min(290px,100%); width:100%;">
+        <div style="width:100%; aspect-ratio:3/2; max-height:62svh; overflow:hidden; background:#1c1c1c;">
           <img src="images/work2-onomatope.jpeg" alt="3Dオノマトペ" style="width:100%; height:100%; object-fit:cover; object-position:center; display:block;">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== WORK 03 ===================== -->
-  <section data-bg="alt" style="background:#141414; padding:clamp(48px,9vw,104px) clamp(20px,5vw,60px);">
-    <div style="max-width:1180px; margin:0 auto; display:flex; flex-wrap:wrap; gap:clamp(24px,4vw,52px); align-items:flex-start;">
-      <div data-reveal style="flex:1 1 300px; min-width:min(300px,100%);">
+  <!-- ===================== PAGE 3 · WORK 03 ===================== -->
+  <section data-page="3" data-bg="alt" style="position:absolute; inset:0; transform-origin:left center; backface-visibility:hidden; -webkit-backface-visibility:hidden; will-change:transform; overflow:hidden; box-shadow:36px 0 80px rgba(0,0,0,0.55); background:#141414; display:flex; align-items:center; justify-content:center; padding:clamp(36px,7vw,80px) clamp(20px,5vw,64px);">
+    <div style="width:100%; max-width:1180px; display:flex; flex-wrap:wrap; gap:clamp(22px,4vw,52px); align-items:center;">
+      <div data-reveal style="flex:1 1 290px; min-width:min(290px,100%);">
         <h2 style="margin:0; font-family:'Zen Kaku Gothic Antique',sans-serif; font-weight:900; font-size:clamp(26px,6vw,42px); line-height:1.18; letter-spacing:0.02em;">哲学探究の<br>ブックデザイン</h2>
         <div style="margin-top:clamp(10px,2vw,16px); font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(12px,3vw,14px); letter-spacing:0.18em; color:#7c7c7c;">2026.06</div>
-        <p style="margin:clamp(18px,3.5vw,28px) 0 0; max-width:420px; font-size:clamp(15px,4vw,17px); line-height:1.9; color:#d4d4d4; font-weight:500;">思考の深淵に嵌る。</p>
+        <p style="margin:clamp(16px,3vw,26px) 0 0; max-width:420px; font-size:clamp(15px,4vw,17px); line-height:1.9; color:#d4d4d4; font-weight:500;">思考の深淵に嵌る。</p>
       </div>
-      <div data-reveal data-d="90" style="flex:1.7 1 440px; min-width:min(300px,100%); width:100%;">
-        <div style="width:100%; aspect-ratio:3/2; overflow:hidden; background:#0c0c0c;">
+      <div data-reveal data-d="90" style="flex:1.7 1 420px; min-width:min(290px,100%); width:100%;">
+        <div style="width:100%; aspect-ratio:3/2; max-height:62svh; overflow:hidden; background:#0c0c0c;">
           <img src="images/work3-philosophy.jpeg" alt="哲学探究のブックデザイン" style="width:100%; height:100%; object-fit:cover; object-position:center; display:block;">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== FOOTER ===================== -->
-  <section data-bg="base" style="background:#0E0E0E; padding:clamp(48px,9vw,96px) clamp(20px,5vw,60px) clamp(40px,7vw,72px); border-top:1px solid rgba(255,255,255,0.08);">
-    <div style="max-width:1180px; margin:0 auto; display:flex; flex-wrap:wrap; gap:clamp(28px,5vw,60px); align-items:flex-end; justify-content:space-between;">
-      <div data-reveal style="">
-        <div style="display:flex; gap:6px;">
-          <span data-bar="g" style="width:clamp(34px,9vw,52px); height:clamp(8px,2vw,12px); background:#1FAF57;"></span>
-          <span data-bar="r" style="width:clamp(34px,9vw,52px); height:clamp(8px,2vw,12px); background:#E0392B;"></span>
-          <span data-bar="b" style="width:clamp(34px,9vw,52px); height:clamp(8px,2vw,12px); background:#2150C8;"></span>
+  <!-- ===================== PAGE 4 · FOOTER ===================== -->
+  <section data-page="4" data-bg="base" style="position:absolute; inset:0; transform-origin:left center; backface-visibility:hidden; -webkit-backface-visibility:hidden; will-change:transform; overflow:hidden; box-shadow:36px 0 80px rgba(0,0,0,0.55); background:#0E0E0E; display:flex; align-items:center; justify-content:center; padding:clamp(40px,8vw,96px) clamp(20px,5vw,64px);">
+    <div style="width:100%; max-width:1080px; display:flex; flex-direction:column;">
+      <div data-reveal style="display:flex; justify-content:space-between; align-items:baseline; padding-bottom:clamp(12px,2vw,16px); border-bottom:1px solid rgba(255,255,255,0.24); font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.8vw,13px); letter-spacing:0.24em; text-transform:uppercase; color:#9a9a9a;">
+        <span>Profile</span>
+        <span>2026</span>
+      </div>
+      <div style="display:flex; flex-wrap:wrap; gap:clamp(28px,5vw,64px); align-items:center; padding:clamp(34px,6vw,64px) 0;">
+        <div data-reveal data-d="80" style="flex:0 0 auto; width:clamp(170px,28vw,280px); aspect-ratio:1/1; overflow:hidden; background:#1c1c1c;">
+          <img src="images/profile.png" alt="AOGU プロフィール" style="width:100%; height:100%; object-fit:cover; object-position:center; display:block;">
+        </div>
+        <div data-reveal data-d="150" style="flex:1 1 320px; min-width:min(300px,100%);">
+          <div style="display:flex; gap:6px; margin-bottom:clamp(20px,3.5vw,30px);">
+            <span data-bar="g" style="width:clamp(34px,8vw,52px); height:clamp(8px,2vw,12px); background:#1FAF57;"></span>
+            <span data-bar="r" style="width:clamp(34px,8vw,52px); height:clamp(8px,2vw,12px); background:#E0392B;"></span>
+            <span data-bar="b" style="width:clamp(34px,8vw,52px); height:clamp(8px,2vw,12px); background:#2150C8;"></span>
+          </div>
+          <div style="font-family:'Helvetica Neue',Arial,sans-serif; font-weight:800; font-size:clamp(48px,9vw,86px); line-height:0.9; letter-spacing:-0.04em;">AOGU</div>
+          <div style="margin-top:clamp(18px,3vw,26px); font-size:clamp(14px,3.6vw,16px); line-height:1.9; color:#bdbdbd;">桑沢デザイン研究所　夜間部　VD1年</div>
         </div>
       </div>
-      <div data-reveal data-d="90" style="font-size:clamp(13px,3.4vw,15px); line-height:2.1; color:#bdbdbd;">AOGU<br>桑沢デザイン研究所夜間部VD1年</div>
+      <div data-reveal data-d="220" style="display:flex; justify-content:space-between; align-items:baseline; padding-top:clamp(12px,2vw,16px); border-top:1px solid rgba(255,255,255,0.24); font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.6vw,13px); letter-spacing:0.2em; text-transform:uppercase; color:#7c7c7c;">
+        <span>ヴィジュアルデザイン</span>
+        <span>Tokyo</span>
+      </div>
     </div>
   </section>
+
+  <!-- ===================== DOTS NAV ===================== -->
+  <nav style="position:absolute; left:50%; bottom:clamp(16px,3vw,30px); transform:translateX(-50%); display:flex; flex-direction:row; gap:14px; z-index:9999;">
+    <span data-dot="0" style="width:9px; height:9px; border-radius:50%; background:#ffffff; cursor:pointer; transition:background .3s ease, transform .3s ease;"></span>
+    <span data-dot="1" style="width:9px; height:9px; border-radius:50%; background:rgba(255,255,255,0.28); cursor:pointer; transition:background .3s ease, transform .3s ease;"></span>
+    <span data-dot="2" style="width:9px; height:9px; border-radius:50%; background:rgba(255,255,255,0.28); cursor:pointer; transition:background .3s ease, transform .3s ease;"></span>
+    <span data-dot="3" style="width:9px; height:9px; border-radius:50%; background:rgba(255,255,255,0.28); cursor:pointer; transition:background .3s ease, transform .3s ease;"></span>
+    <span data-dot="4" style="width:9px; height:9px; border-radius:50%; background:rgba(255,255,255,0.28); cursor:pointer; transition:background .3s ease, transform .3s ease;"></span>
+  </nav>
 
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 430, &quot;height&quot;: 920}, &quot;bgTone&quot;: {&quot;editor&quot;: &quot;enum&quot;, &quot;default&quot;: &quot;black&quot;, &quot;options&quot;: [&quot;black&quot;, &quot;charcoal&quot;], &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;配色&quot;}, &quot;revealMotion&quot;: {&quot;editor&quot;: &quot;enum&quot;, &quot;default&quot;: &quot;fade-up&quot;, &quot;options&quot;: [&quot;fade-up&quot;, &quot;fade&quot;, &quot;none&quot;], &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;演出&quot;}}">
 class Component extends DCLogic {
   componentDidMount() {
+    this.index = 0;
+    this.animating = false;
+    this.cooldown = 0;
+    this.ty = null;
+    this.pages = this.qsa('[data-page]');
+    this.n = this.pages.length;
+    this.dots = this.qsa('[data-dot]');
     this.applyTheme();
-    this.setupReveal();
+    this.initInner();
+    this.bind();
+    // paint initial stacking immediately (no flash), then enable transitions
+    this.pages.forEach((p, i) => {
+      p.style.transform = 'rotateY(0deg)';
+      p.style.zIndex = String(this.n - i);
+      p.style.pointerEvents = i === 0 ? 'auto' : 'none';
+    });
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      this.pages.forEach((p) => {
+        p.style.transition = 'transform 1s cubic-bezier(.62,.02,.2,1)';
+      });
+      this.setIndex(0, true);
+    }));
   }
-  componentDidUpdate() {
-    this.applyTheme();
-    const motion = (this.props && this.props.revealMotion) || 'fade-up';
-    if (motion !== this._motion) this.setupReveal();
-  }
-  componentWillUnmount() {
-    this.clearReveal();
-  }
-  clearReveal() {
-    [this._fallback, this._t1, this._t2].forEach((t) => { if (t) clearTimeout(t); });
-    if (this._check) {
-      window.removeEventListener('scroll', this._check);
-      window.removeEventListener('resize', this._check);
-    }
-  }
-  qsa(sel) {
-    return Array.from(document.querySelectorAll(sel));
-  }
+  componentDidUpdate() { this.applyTheme(); }
+  componentWillUnmount() { this.unbind(); }
+  qsa(s) { return Array.from(document.querySelectorAll(s)); }
+
   applyTheme() {
     const p = this.props || {};
     const tone = p.bgTone || 'black';
@@ -145,51 +172,120 @@ class Component extends DCLogic {
     this.qsa('[data-bg="base"]').forEach((el) => { el.style.background = base; });
     this.qsa('[data-bg="alt"]').forEach((el) => { el.style.background = alt; });
   }
-  setupReveal() {
-    this.clearReveal();
-    const motion = (this.props && this.props.revealMotion) || 'fade-up';
-    this._motion = motion;
-    const items = this.qsa('[data-reveal]');
+
+  initInner() {
     const ease = 'cubic-bezier(.2,.6,.2,1)';
-    items.forEach((it) => {
-      const d = parseInt(it.getAttribute('data-d') || '0', 10);
-      delete it.dataset.shown;
-      it.style.willChange = 'opacity, transform';
-      it.style.transition = 'opacity .85s ' + ease + ' ' + d + 'ms, transform .9s ' + ease + ' ' + d + 'ms';
-      if (motion === 'none') {
-        it.style.opacity = '1';
-        it.style.transform = 'none';
-      } else {
-        it.style.opacity = '0';
-        it.style.transform = motion === 'fade' ? 'none' : 'translateY(24px)';
-      }
+    this.qsa('[data-reveal]').forEach((el) => {
+      const d = parseInt(el.getAttribute('data-d') || '0', 10);
+      el.style.willChange = 'opacity, transform';
+      el.style.transition = 'opacity .7s ' + ease + ' ' + d + 'ms, transform .75s ' + ease + ' ' + d + 'ms';
     });
-    if (motion === 'none') return;
-    const reveal = (el) => {
-      if (el.dataset.shown) return;
-      el.dataset.shown = '1';
-      el.style.opacity = '1';
-      el.style.transform = 'translateY(0)';
-    };
-    const check = () => {
-      const vh = window.innerHeight || document.documentElement.clientHeight || 0;
-      items.forEach((it) => {
-        if (it.dataset.shown) return;
-        const r = it.getBoundingClientRect();
-        if (r.top < vh * 0.92 && r.bottom > 0) reveal(it);
+  }
+
+  setIndex(idx) {
+    idx = Math.max(0, Math.min(this.n - 1, idx));
+    this.index = idx;
+    this.pages.forEach((p, i) => {
+      if (i < idx) {
+        p.style.transform = 'rotateY(-179.9deg)';
+        p.style.zIndex = String(this.n + i);
+      } else {
+        p.style.transform = 'rotateY(0deg)';
+        p.style.zIndex = String(this.n - i);
+      }
+      p.style.pointerEvents = i === idx ? 'auto' : 'none';
+    });
+    this.dots.forEach((d, i) => {
+      d.style.background = i === idx ? '#ffffff' : 'rgba(255,255,255,0.28)';
+      d.style.transform = i === idx ? 'scale(1.45)' : 'scale(1)';
+    });
+    const motion = (this.props && this.props.revealMotion) || 'fade-up';
+    this.pages.forEach((p, i) => {
+      Array.from(p.querySelectorAll('[data-reveal]')).forEach((el) => {
+        if (i === idx) {
+          el.style.opacity = '1';
+          el.style.transform = 'translateY(0)';
+        } else if (motion === 'none') {
+          el.style.opacity = '1';
+          el.style.transform = 'none';
+        } else {
+          el.style.opacity = '0';
+          el.style.transform = motion === 'fade' ? 'none' : 'translateY(22px)';
+        }
       });
+    });
+  }
+
+  go(dir) {
+    const now = Date.now();
+    if (this.animating || now < this.cooldown) return;
+    const ni = this.index + dir;
+    if (ni < 0 || ni >= this.n) return;
+    this.animating = true;
+    this.cooldown = now + 1000;
+    this.setIndex(ni);
+    setTimeout(() => { this.animating = false; }, 960);
+  }
+
+  jumpTo(i) {
+    if (this.animating || i === this.index) return;
+    this.animating = true;
+    this.cooldown = Date.now() + 1000;
+    this.setIndex(i);
+    setTimeout(() => { this.animating = false; }, 960);
+  }
+
+  bind() {
+    const root = document.querySelector('[data-flip-root]');
+    this._root = root;
+    this._wheel = (e) => {
+      e.preventDefault();
+      const d = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
+      if (Math.abs(d) < 6) return;
+      this.go(d > 0 ? 1 : -1);
     };
-    this._check = check;
-    window.addEventListener('scroll', check, { passive: true });
-    window.addEventListener('resize', check);
-    check();
-    this._t1 = setTimeout(check, 250);
-    this._t2 = setTimeout(check, 900);
-    this._fallback = setTimeout(() => items.forEach(reveal), 2600);
+    root.addEventListener('wheel', this._wheel, { passive: false });
+
+    this._key = (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === 'PageDown' || e.key === ' ') { e.preventDefault(); this.go(1); }
+      else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp' || e.key === 'PageUp') { e.preventDefault(); this.go(-1); }
+    };
+    window.addEventListener('keydown', this._key);
+
+    this._ts = (e) => { this.tx = e.touches[0].clientX; this.ty = e.touches[0].clientY; };
+    this._tm = (e) => { if (this.tx != null) e.preventDefault(); };
+    this._te = (e) => {
+      if (this.tx == null) return;
+      const dx = this.tx - e.changedTouches[0].clientX;
+      const dy = this.ty - e.changedTouches[0].clientY;
+      if (Math.abs(dx) > 38 && Math.abs(dx) > Math.abs(dy)) this.go(dx > 0 ? 1 : -1);
+      this.tx = null; this.ty = null;
+    };
+    root.addEventListener('touchstart', this._ts, { passive: true });
+    root.addEventListener('touchmove', this._tm, { passive: false });
+    root.addEventListener('touchend', this._te, { passive: true });
+
+    this._dotHandlers = this.dots.map((d, i) => {
+      const h = () => this.jumpTo(i);
+      d.addEventListener('click', h);
+      return h;
+    });
   }
-  renderVals() {
-    return {};
+
+  unbind() {
+    if (this._root) {
+      this._root.removeEventListener('wheel', this._wheel);
+      this._root.removeEventListener('touchstart', this._ts);
+      this._root.removeEventListener('touchmove', this._tm);
+      this._root.removeEventListener('touchend', this._te);
+    }
+    window.removeEventListener('keydown', this._key);
+    if (this._dotHandlers) {
+      this.dots.forEach((d, i) => d.removeEventListener('click', this._dotHandlers[i]));
+    }
   }
+
+  renderVals() { return {}; }
 }
 </script>
 </body>
