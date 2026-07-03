@@ -15,17 +15,23 @@
   *{ box-sizing:border-box; -webkit-font-smoothing:antialiased; }
   html,body{ margin:0; padding:0; background:#0E0E0E; overflow:hidden; height:100%; overscroll-behavior:none; }
   img{ max-width:100%; }
+  @keyframes pageShine { 0%{opacity:0;} 42%{opacity:.5;} 58%{opacity:.5;} 100%{opacity:0;} }
+  @keyframes pageLift { 0%{box-shadow:6px 0 20px rgba(0,0,0,0.14);} 50%{box-shadow:70px 0 100px rgba(0,0,0,0.28);} 100%{box-shadow:6px 0 20px rgba(0,0,0,0.14);} }
+  @keyframes pageBrightness { 0%{filter:brightness(1);} 46%{filter:brightness(0.9);} 55%{filter:brightness(0.88);} 100%{filter:brightness(1);} }
+  @keyframes pageCurl { 0%{transform:scaleY(1);} 50%{transform:scaleY(0.962);} 100%{transform:scaleY(1);} }
 </style>
 </helmet>
 
-<div data-flip-root style="position:fixed; inset:0; background:#0E0E0E; color:#ffffff; font-family:'Zen Kaku Gothic New',sans-serif; perspective:2200px; touch-action:none; overflow:hidden;">
+<div data-flip-root style="position:fixed; inset:0; background:#F4F5F7; color:#111111; font-family:'Zen Kaku Gothic New',sans-serif; perspective:2200px; touch-action:none; overflow:hidden;">
 
   <!-- ===================== PAGE 0 · HERO ===================== -->
-  <section data-page="0" data-bg="base" style="position:absolute; inset:0; transform-origin:left center; backface-visibility:hidden; -webkit-backface-visibility:hidden; will-change:transform; overflow:hidden; box-shadow:36px 0 80px rgba(0,0,0,0.55); background:#0E0E0E; display:flex; align-items:stretch; justify-content:center; padding:clamp(30px,6vw,64px) clamp(20px,5vw,64px);">
-    <div style="width:100%; max-width:1080px; display:flex; flex-direction:column; justify-content:space-between;">
-    <div data-reveal style="display:flex; justify-content:space-between; align-items:center; padding-bottom:clamp(12px,2vw,16px); border-bottom:1px solid rgba(255,255,255,0.2); font-size:clamp(11px,2.8vw,13px); letter-spacing:0.18em; color:#9a9a9a;">
+  <section data-page="0" data-bg="base" style="position:absolute; inset:0; transform-origin:left center; backface-visibility:hidden; -webkit-backface-visibility:hidden; will-change:transform; overflow:hidden; box-shadow:6px 0 20px rgba(0,0,0,0.14); background:#0E0E0E; display:flex; align-items:stretch; justify-content:center; padding:clamp(30px,6vw,64px) clamp(20px,5vw,64px);">
+    <div data-shine style="position:absolute; inset:0; opacity:0; pointer-events:none; z-index:5; background:linear-gradient(90deg, rgba(0,0,0,0.3), rgba(0,0,0,0) 40%);"></div>
+    <div style="position:absolute; right:clamp(20px,5vw,64px); bottom:clamp(20px,5vw,54px); z-index:6; font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.6vw,13px); letter-spacing:0.2em; color:#8f8f8f; pointer-events:none;">01&nbsp;/&nbsp;05</div>
+    <div data-inner style="width:100%; max-width:1080px; display:flex; flex-direction:column; justify-content:space-between;">
+    <div data-reveal style="display:flex; justify-content:space-between; align-items:center; padding-bottom:clamp(12px,2vw,16px); border-bottom:1px solid rgba(0,0,0,0.12); font-size:clamp(11px,2.8vw,13px); letter-spacing:0.18em; color:#6b6b6b;">
       <span style="font-family:'Helvetica Neue',Arial,sans-serif; font-weight:700; letter-spacing:0.16em;">PORTFOLIO</span>
-      <span>桑沢デザイン研究所夜間部VD1年</span>
+      <span style="font-family:'Helvetica Neue',Arial,sans-serif; letter-spacing:0.16em;">2026</span>
     </div>
     <div data-reveal data-d="70">
       <div style="display:flex; gap:clamp(5px,1.5vw,8px); margin-bottom:clamp(18px,4vw,30px);">
@@ -36,44 +42,48 @@
       <h1 style="margin:0; font-family:'Helvetica Neue',Arial,sans-serif; font-weight:800; font-size:clamp(58px,20vw,210px); line-height:0.82; letter-spacing:-0.055em;">AOGU</h1>
       <div style="margin-top:clamp(14px,3vw,24px); font-family:'Zen Kaku Gothic Antique',sans-serif; font-weight:900; font-size:clamp(18px,5vw,30px); letter-spacing:0.14em;">ポートフォリオ</div>
     </div>
-    <div data-reveal data-d="140" style="display:flex; justify-content:space-between; align-items:center; padding-top:clamp(12px,2vw,16px); border-top:1px solid rgba(255,255,255,0.2); font-size:clamp(11px,2.8vw,13px); letter-spacing:0.16em; color:#9a9a9a;">
+    <div data-reveal data-d="140" style="display:flex; justify-content:space-between; align-items:center; padding-top:clamp(12px,2vw,16px); border-top:1px solid rgba(0,0,0,0.12); font-size:clamp(11px,2.8vw,13px); letter-spacing:0.16em; color:#6b6b6b;">
       <span style="text-transform:uppercase;">Design</span>
     </div>
     </div>
-    <div data-reveal data-d="180" style="position:absolute; left:0; right:0; bottom:clamp(16px,3vw,30px); display:flex; justify-content:center; align-items:center; gap:9px; color:#cfcfcf; z-index:5;">
-      <span style="font-size:18px; line-height:1;">←</span>
-      <span style="font-size:clamp(9px,2.4vw,11px); letter-spacing:0.24em; padding-left:0.24em;">スワイプしてめくる</span>
+    <div data-reveal data-d="180" style="position:absolute; left:0; right:0; bottom:clamp(92px,14vw,132px); display:flex; justify-content:center; align-items:center; gap:11px; color:#555555; z-index:5;">
+      <span style="font-size:clamp(16px,3.2vw,21px); line-height:1;">←</span>
+      <span style="font-size:clamp(12px,2.9vw,15px); letter-spacing:0.24em; padding-left:0.24em;">左スワイプしてめくる</span>
     </div>
   </section>
 
   <!-- ===================== PAGE 1 · WORK 01 ===================== -->
-  <section data-page="1" data-bg="alt" style="position:absolute; inset:0; transform-origin:left center; backface-visibility:hidden; -webkit-backface-visibility:hidden; will-change:transform; overflow:hidden; box-shadow:36px 0 80px rgba(0,0,0,0.55); background:#141414; display:flex; align-items:stretch; justify-content:center; padding:clamp(30px,6vw,64px) clamp(20px,5vw,64px);">
-    <div style="width:100%; max-width:1080px; display:flex; flex-direction:column;">
-      <div data-reveal style="display:flex; justify-content:space-between; align-items:baseline; padding-bottom:clamp(12px,2vw,16px); border-bottom:1px solid rgba(255,255,255,0.22); font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.8vw,13px); letter-spacing:0.24em; text-transform:uppercase; color:#9a9a9a;">
+  <section data-page="1" data-bg="alt" style="position:absolute; inset:0; transform-origin:left center; backface-visibility:hidden; -webkit-backface-visibility:hidden; will-change:transform; overflow:hidden; box-shadow:6px 0 20px rgba(0,0,0,0.14); background:#F4F5F7; display:flex; align-items:stretch; justify-content:center; padding:clamp(30px,6vw,64px) clamp(20px,5vw,64px);">
+    <div data-shine style="position:absolute; inset:0; opacity:0; pointer-events:none; z-index:5; background:linear-gradient(90deg, rgba(0,0,0,0.3), rgba(0,0,0,0) 40%);"></div>
+    <div style="position:absolute; right:clamp(20px,5vw,64px); bottom:clamp(20px,5vw,54px); z-index:6; font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.6vw,13px); letter-spacing:0.2em; color:#8f8f8f; pointer-events:none;">02&nbsp;/&nbsp;05</div>
+    <div data-inner style="width:100%; max-width:1080px; display:flex; flex-direction:column;">
+      <div data-reveal style="display:flex; justify-content:space-between; align-items:baseline; padding-bottom:clamp(12px,2vw,16px); border-bottom:1px solid rgba(0,0,0,0.14); font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.8vw,13px); letter-spacing:0.24em; text-transform:uppercase; color:#6b6b6b;">
         <span>Work 01</span>
         <span>2026.04</span>
       </div>
       <div style="flex:1; display:flex; flex-wrap:wrap; gap:clamp(22px,4vw,52px); align-items:center; padding:clamp(26px,5vw,52px) 0;">
         <div data-reveal data-d="80" style="flex:1 1 290px; min-width:min(290px,100%);">
           <h2 style="margin:0; font-family:'Zen Kaku Gothic Antique',sans-serif; font-weight:900; font-size:clamp(26px,6vw,42px); line-height:1.18; letter-spacing:0.02em;">けん玉による<br>自画像</h2>
-          <p style="margin:clamp(16px,3vw,26px) 0 0; max-width:420px; font-size:clamp(14px,3.6vw,15px); line-height:2.05; color:#bdbdbd;">これから羽ばたいていきたいという理想の私。どこからか冷めた目で見つめる現実の自分。</p>
+          <p style="margin:clamp(16px,3vw,26px) 0 0; max-width:420px; font-size:clamp(14px,3.6vw,15px); line-height:2.05; color:#4a4a4a;">これから羽ばたいていきたいという理想の私。どこからか冷めた目で見つめる現実の自分。</p>
         </div>
         <div data-reveal data-d="150" style="flex:1.7 1 420px; min-width:min(290px,100%); width:100%;">
-          <div style="width:100%; aspect-ratio:3/2; max-height:54svh; overflow:hidden; background:#0c0c0c;">
+          <div style="width:100%; aspect-ratio:3/2; max-height:54svh; overflow:hidden; background:#eeece8;">
             <img src="images/work1-kendama.jpg" alt="けん玉による自画像" style="width:100%; height:100%; object-fit:cover; object-position:center; display:block;">
           </div>
         </div>
       </div>
-      <div data-reveal data-d="220" style="display:flex; justify-content:space-between; align-items:baseline; padding-top:clamp(12px,2vw,16px); border-top:1px solid rgba(255,255,255,0.22); font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.6vw,13px); letter-spacing:0.2em; text-transform:uppercase; color:#7c7c7c;">
+      <div data-reveal data-d="220" style="display:flex; justify-content:space-between; align-items:baseline; padding-top:clamp(12px,2vw,16px); border-top:1px solid rgba(0,0,0,0.14); font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.6vw,13px); letter-spacing:0.2em; text-transform:uppercase; color:#9a9a9a;">
         <span>Self-Portrait</span>
       </div>
     </div>
   </section>
 
   <!-- ===================== PAGE 2 · WORK 02 ===================== -->
-  <section data-page="2" data-bg="base" style="position:absolute; inset:0; transform-origin:left center; backface-visibility:hidden; -webkit-backface-visibility:hidden; will-change:transform; overflow:hidden; box-shadow:36px 0 80px rgba(0,0,0,0.55); background:#0E0E0E; display:flex; align-items:stretch; justify-content:center; padding:clamp(30px,6vw,64px) clamp(20px,5vw,64px);">
-    <div style="width:100%; max-width:1080px; display:flex; flex-direction:column;">
-      <div data-reveal style="display:flex; justify-content:space-between; align-items:baseline; padding-bottom:clamp(12px,2vw,16px); border-bottom:1px solid rgba(255,255,255,0.22); font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.8vw,13px); letter-spacing:0.24em; text-transform:uppercase; color:#9a9a9a;">
+  <section data-page="2" data-bg="base" style="position:absolute; inset:0; transform-origin:left center; backface-visibility:hidden; -webkit-backface-visibility:hidden; will-change:transform; overflow:hidden; box-shadow:6px 0 20px rgba(0,0,0,0.14); background:#0E0E0E; display:flex; align-items:stretch; justify-content:center; padding:clamp(30px,6vw,64px) clamp(20px,5vw,64px);">
+    <div data-shine style="position:absolute; inset:0; opacity:0; pointer-events:none; z-index:5; background:linear-gradient(90deg, rgba(0,0,0,0.3), rgba(0,0,0,0) 40%);"></div>
+    <div style="position:absolute; right:clamp(20px,5vw,64px); bottom:clamp(20px,5vw,54px); z-index:6; font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.6vw,13px); letter-spacing:0.2em; color:#8f8f8f; pointer-events:none;">03&nbsp;/&nbsp;05</div>
+    <div data-inner style="width:100%; max-width:1080px; display:flex; flex-direction:column;">
+      <div data-reveal style="display:flex; justify-content:space-between; align-items:baseline; padding-bottom:clamp(12px,2vw,16px); border-bottom:1px solid rgba(0,0,0,0.14); font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.8vw,13px); letter-spacing:0.24em; text-transform:uppercase; color:#6b6b6b;">
         <span>Work 02</span>
         <span>2026.05</span>
       </div>
@@ -81,77 +91,76 @@
         <div data-reveal data-d="80" style="flex:1 1 290px; min-width:min(290px,100%);">
           <h2 style="margin:0; font-family:'Zen Kaku Gothic Antique',sans-serif; font-weight:900; font-size:clamp(26px,6vw,42px); line-height:1.18; letter-spacing:0.02em;">3Dオノマトペ</h2>
           <div style="margin-top:clamp(16px,3vw,26px); display:flex; flex-direction:column; gap:clamp(6px,1.5vw,10px);">
-            <span style="font-family:'Zen Kaku Gothic Antique',sans-serif; font-weight:900; font-size:clamp(14px,3.6vw,15px); letter-spacing:0.04em; color:#1FAF57; line-height:1.6;">ビ<span style="color:#ffffff;">ュ</span>ンビ<span style="color:#ffffff;">ュ</span>ン</span>
-            <span style="font-family:'Zen Kaku Gothic Antique',sans-serif; font-weight:900; font-size:clamp(14px,3.6vw,15px); letter-spacing:0.04em; line-height:1.6;"><span style="color:#E0392B;">ゴ</span><span style="color:#ffffff;">ワ</span><span style="color:#2150C8;">ゴ</span><span style="color:#ffffff;">ワ</span></span>
+            <span style="font-family:'Zen Kaku Gothic Antique',sans-serif; font-weight:900; font-size:clamp(14px,3.6vw,15px); letter-spacing:0.04em; color:#1FAF57; line-height:1.6;">ビ<span style="color:#111111;">ュ</span>ンビ<span style="color:#111111;">ュ</span>ン</span>
+            <span style="font-family:'Zen Kaku Gothic Antique',sans-serif; font-weight:900; font-size:clamp(14px,3.6vw,15px); letter-spacing:0.04em; line-height:1.6;"><span style="color:#E0392B;">ゴ</span><span style="color:#111111;">ワ</span><span style="color:#2150C8;">ゴ</span><span style="color:#111111;">ワ</span></span>
           </div>
         </div>
         <div data-reveal data-d="150" style="flex:1.7 1 420px; min-width:min(290px,100%); width:100%;">
-          <div style="width:100%; aspect-ratio:3/2; max-height:54svh; overflow:hidden; background:#1c1c1c;">
+          <div style="width:100%; aspect-ratio:3/2; max-height:54svh; overflow:hidden; background:#eeece8;">
             <img src="images/work2-onomatope.jpeg" alt="3Dオノマトペ" style="width:100%; height:100%; object-fit:cover; object-position:center; display:block;">
           </div>
         </div>
       </div>
-      <div data-reveal data-d="220" style="display:flex; justify-content:space-between; align-items:baseline; padding-top:clamp(12px,2vw,16px); border-top:1px solid rgba(255,255,255,0.22); font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.6vw,13px); letter-spacing:0.2em; text-transform:uppercase; color:#7c7c7c;">
+      <div data-reveal data-d="220" style="display:flex; justify-content:space-between; align-items:baseline; padding-top:clamp(12px,2vw,16px); border-top:1px solid rgba(0,0,0,0.14); font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.6vw,13px); letter-spacing:0.2em; text-transform:uppercase; color:#9a9a9a;">
         <span>Onomatopoeia</span>
       </div>
     </div>
   </section>
 
   <!-- ===================== PAGE 3 · WORK 03 ===================== -->
-  <section data-page="3" data-bg="alt" style="position:absolute; inset:0; transform-origin:left center; backface-visibility:hidden; -webkit-backface-visibility:hidden; will-change:transform; overflow:hidden; box-shadow:36px 0 80px rgba(0,0,0,0.55); background:#141414; display:flex; align-items:stretch; justify-content:center; padding:clamp(30px,6vw,64px) clamp(20px,5vw,64px);">
-    <div style="width:100%; max-width:1080px; display:flex; flex-direction:column;">
-      <div data-reveal style="display:flex; justify-content:space-between; align-items:baseline; padding-bottom:clamp(12px,2vw,16px); border-bottom:1px solid rgba(255,255,255,0.22); font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.8vw,13px); letter-spacing:0.24em; text-transform:uppercase; color:#9a9a9a;">
+  <section data-page="3" data-bg="alt" style="position:absolute; inset:0; transform-origin:left center; backface-visibility:hidden; -webkit-backface-visibility:hidden; will-change:transform; overflow:hidden; box-shadow:6px 0 20px rgba(0,0,0,0.14); background:#F4F5F7; display:flex; align-items:stretch; justify-content:center; padding:clamp(30px,6vw,64px) clamp(20px,5vw,64px);">
+    <div data-shine style="position:absolute; inset:0; opacity:0; pointer-events:none; z-index:5; background:linear-gradient(90deg, rgba(0,0,0,0.3), rgba(0,0,0,0) 40%);"></div>
+    <div style="position:absolute; right:clamp(20px,5vw,64px); bottom:clamp(20px,5vw,54px); z-index:6; font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.6vw,13px); letter-spacing:0.2em; color:#8f8f8f; pointer-events:none;">04&nbsp;/&nbsp;05</div>
+    <div data-inner style="width:100%; max-width:1080px; display:flex; flex-direction:column;">
+      <div data-reveal style="display:flex; justify-content:space-between; align-items:baseline; padding-bottom:clamp(12px,2vw,16px); border-bottom:1px solid rgba(0,0,0,0.14); font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.8vw,13px); letter-spacing:0.24em; text-transform:uppercase; color:#6b6b6b;">
         <span>Work 03</span>
         <span>2026.06</span>
       </div>
       <div style="flex:1; display:flex; flex-wrap:wrap; gap:clamp(22px,4vw,52px); align-items:center; padding:clamp(26px,5vw,52px) 0;">
         <div data-reveal data-d="80" style="flex:1 1 290px; min-width:min(290px,100%);">
           <h2 style="margin:0; font-family:'Zen Kaku Gothic Antique',sans-serif; font-weight:900; font-size:clamp(26px,6vw,42px); line-height:1.18; letter-spacing:0.02em;">哲学探究の<br>ブックデザイン</h2>
-          <p style="margin:clamp(16px,3vw,26px) 0 0; max-width:420px; font-size:clamp(15px,4vw,17px); line-height:1.9; color:#d4d4d4; font-weight:500;">思考の深淵に嵌る。</p>
+          <p style="margin:clamp(16px,3vw,26px) 0 0; max-width:420px; font-size:clamp(15px,4vw,17px); line-height:1.9; color:#3a3a3a; font-weight:500;">思考の深淵に嵌る。</p>
         </div>
         <div data-reveal data-d="150" style="flex:1.7 1 420px; min-width:min(290px,100%); width:100%;">
-          <div style="width:100%; aspect-ratio:3/2; max-height:54svh; overflow:hidden; background:#0c0c0c;">
+          <div style="width:100%; aspect-ratio:3/2; max-height:54svh; overflow:hidden; background:#eeece8;">
             <img src="images/work3-philosophy.jpeg" alt="哲学探究のブックデザイン" style="width:100%; height:100%; object-fit:cover; object-position:center; display:block;">
           </div>
         </div>
       </div>
-      <div data-reveal data-d="220" style="display:flex; justify-content:space-between; align-items:baseline; padding-top:clamp(12px,2vw,16px); border-top:1px solid rgba(255,255,255,0.22); font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.6vw,13px); letter-spacing:0.2em; text-transform:uppercase; color:#7c7c7c;">
+      <div data-reveal data-d="220" style="display:flex; justify-content:space-between; align-items:baseline; padding-top:clamp(12px,2vw,16px); border-top:1px solid rgba(0,0,0,0.14); font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.6vw,13px); letter-spacing:0.2em; text-transform:uppercase; color:#9a9a9a;">
         <span>Book Design</span>
       </div>
     </div>
   </section>
 
   <!-- ===================== PAGE 4 · FOOTER ===================== -->
-  <section data-page="4" data-bg="base" style="position:absolute; inset:0; transform-origin:left center; backface-visibility:hidden; -webkit-backface-visibility:hidden; will-change:transform; overflow:hidden; box-shadow:36px 0 80px rgba(0,0,0,0.55); background:#0E0E0E; display:flex; align-items:stretch; justify-content:center; padding:clamp(30px,6vw,64px) clamp(20px,5vw,64px);">
-    <div style="width:100%; max-width:1080px; display:flex; flex-direction:column;">
-      <div data-reveal style="display:flex; justify-content:space-between; align-items:baseline; padding-bottom:clamp(12px,2vw,16px); border-bottom:1px solid rgba(255,255,255,0.24); font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.8vw,13px); letter-spacing:0.24em; text-transform:uppercase; color:#9a9a9a;">
+  <section data-page="4" data-bg="base" style="position:absolute; inset:0; transform-origin:left center; backface-visibility:hidden; -webkit-backface-visibility:hidden; will-change:transform; overflow:hidden; box-shadow:6px 0 20px rgba(0,0,0,0.14); background:#0E0E0E; display:flex; align-items:stretch; justify-content:center; padding:clamp(30px,6vw,64px) clamp(20px,5vw,64px);">
+    <div data-shine style="position:absolute; inset:0; opacity:0; pointer-events:none; z-index:5; background:linear-gradient(90deg, rgba(0,0,0,0.3), rgba(0,0,0,0) 40%);"></div>
+    <div style="position:absolute; right:clamp(20px,5vw,64px); bottom:clamp(20px,5vw,54px); z-index:6; font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.6vw,13px); letter-spacing:0.2em; color:#8f8f8f; pointer-events:none;">05&nbsp;/&nbsp;05</div>
+    <div data-inner style="width:100%; max-width:1080px; display:flex; flex-direction:column;">
+      <div data-reveal style="display:flex; justify-content:space-between; align-items:baseline; padding-bottom:clamp(12px,2vw,16px); border-bottom:1px solid rgba(0,0,0,0.16); font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.8vw,13px); letter-spacing:0.24em; text-transform:uppercase; color:#6b6b6b;">
         <span>Profile</span>
         <span>2026</span>
       </div>
-      <div style="flex:1; display:flex; flex-wrap:wrap; gap:clamp(28px,5vw,64px); align-items:center; padding:clamp(26px,5vw,52px) 0;">
-        <div data-reveal data-d="80" style="flex:0 0 auto; width:clamp(170px,28vw,280px); aspect-ratio:1/1; overflow:hidden; background:#1c1c1c;">
+      <div style="flex:1; display:flex; flex-wrap:wrap; gap:clamp(26px,5vw,56px); align-items:center; justify-content:center; padding:clamp(24px,5vw,48px) 0;">
+        <div data-reveal data-d="80" style="flex:0 0 auto; width:clamp(200px,32vw,300px); aspect-ratio:1/1; border-radius:50%; overflow:hidden; background:#eeece8;">
           <img src="images/profile.png" alt="AOGU プロフィール" style="width:100%; height:100%; object-fit:cover; object-position:center; display:block;">
         </div>
-        <div data-reveal data-d="150" style="flex:1 1 320px; min-width:min(300px,100%);">
+        <div data-reveal data-d="150" style="flex:1 1 340px; min-width:min(280px,100%);">
           <div style="display:flex; gap:6px; margin-bottom:clamp(20px,3.5vw,30px);">
             <span data-bar="g" style="width:clamp(34px,8vw,52px); height:clamp(8px,2vw,12px); background:#1FAF57;"></span>
             <span data-bar="r" style="width:clamp(34px,8vw,52px); height:clamp(8px,2vw,12px); background:#E0392B;"></span>
             <span data-bar="b" style="width:clamp(34px,8vw,52px); height:clamp(8px,2vw,12px); background:#2150C8;"></span>
           </div>
           <div style="font-family:'Helvetica Neue',Arial,sans-serif; font-weight:800; font-size:clamp(48px,9vw,86px); line-height:0.9; letter-spacing:-0.04em;">AOGU</div>
-          <div style="margin-top:clamp(18px,3vw,26px); font-size:clamp(14px,3.6vw,16px); line-height:1.9; color:#bdbdbd;">桑沢デザイン研究所　夜間部　VD1年</div>
+          <div style="margin-top:clamp(18px,3vw,26px); font-size:clamp(14px,3.6vw,16px); line-height:1.9; color:#4a4a4a;">桑沢デザイン研究所　夜間部　VD1年</div>
         </div>
       </div>
-      <div data-reveal data-d="220" style="display:flex; justify-content:space-between; align-items:baseline; padding-top:clamp(12px,2vw,16px); border-top:1px solid rgba(255,255,255,0.24); font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.6vw,13px); letter-spacing:0.2em; text-transform:uppercase; color:#7c7c7c;">
+      <div data-reveal data-d="220" style="display:flex; justify-content:space-between; align-items:baseline; padding-top:clamp(12px,2vw,16px); border-top:1px solid rgba(0,0,0,0.16); font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.6vw,13px); letter-spacing:0.2em; text-transform:uppercase; color:#9a9a9a;">
         <span>Terracotta</span>
       </div>
     </div>
   </section>
-
-  <!-- ===================== PAGE COUNTER ===================== -->
-  <div data-counter style="position:absolute; right:clamp(20px,5vw,64px); bottom:clamp(30px,6vw,64px); z-index:9999; font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.6vw,13px); letter-spacing:0.2em; color:#7c7c7c; transition:opacity .45s ease; pointer-events:none;">
-    <span data-cur style="color:#ffffff; font-weight:700;">01</span>&nbsp;/&nbsp;<span data-total>05</span>
-  </div>
 
 </div>
 </x-dc>
@@ -164,10 +173,6 @@ class Component extends DCLogic {
     this.ty = null;
     this.pages = this.qsa('[data-page]');
     this.n = this.pages.length;
-    this.counter = document.querySelector('[data-counter]');
-    this.curEl = document.querySelector('[data-cur]');
-    const totalEl = document.querySelector('[data-total]');
-    if (totalEl) totalEl.textContent = String(this.n).padStart(2, '0');
     this.applyTheme();
     this.initInner();
     this.bind();
@@ -191,8 +196,8 @@ class Component extends DCLogic {
   applyTheme() {
     const p = this.props || {};
     const tone = p.bgTone || 'black';
-    const base = tone === 'charcoal' ? '#1b1b1b' : '#0E0E0E';
-    const alt = tone === 'charcoal' ? '#242424' : '#141414';
+    const base = tone === 'charcoal' ? '#e9e9e7' : '#F4F5F7';
+    const alt = base;
     this.qsa('[data-bg="base"]').forEach((el) => { el.style.background = base; });
     this.qsa('[data-bg="alt"]').forEach((el) => { el.style.background = alt; });
   }
@@ -208,6 +213,8 @@ class Component extends DCLogic {
 
   setIndex(idx) {
     idx = Math.max(0, Math.min(this.n - 1, idx));
+    const prev = this.index;
+    const dir = idx === prev ? 0 : (idx > prev ? 1 : -1);
     this.index = idx;
     this.pages.forEach((p, i) => {
       if (i < idx) {
@@ -219,9 +226,26 @@ class Component extends DCLogic {
       }
       p.style.pointerEvents = i === idx ? 'auto' : 'none';
     });
-    if (this.counter && this.curEl) {
-      this.counter.style.opacity = '1';
-      this.curEl.textContent = String(idx + 1).padStart(2, '0');
+    if (dir !== 0) {
+      const turningPage = dir === 1 ? this.pages[prev] : this.pages[idx];
+      if (turningPage) {
+        const shine = turningPage.querySelector('[data-shine]');
+        if (shine) {
+          shine.style.animation = 'none';
+          void shine.offsetWidth;
+          shine.style.animation = 'pageShine 1s cubic-bezier(.62,.02,.2,1)';
+        }
+        turningPage.style.animation = 'none';
+        void turningPage.offsetWidth;
+        turningPage.style.animation = 'pageLift 1s cubic-bezier(.62,.02,.2,1), pageBrightness 1s cubic-bezier(.62,.02,.2,1)';
+        const inner = turningPage.querySelector('[data-inner]');
+        if (inner) {
+          inner.style.transformOrigin = 'left center';
+          inner.style.animation = 'none';
+          void inner.offsetWidth;
+          inner.style.animation = 'pageCurl 1s cubic-bezier(.62,.02,.2,1)';
+        }
+      }
     }
     const motion = (this.props && this.props.revealMotion) || 'fade-up';
     this.pages.forEach((p, i) => {
