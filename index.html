@@ -22,7 +22,7 @@
 </style>
 </helmet>
 
-<div data-flip-root style="position:fixed; inset:0; background:#F4F5F7; color:#111111; font-family:'Zen Kaku Gothic New',sans-serif; perspective:2200px; touch-action:none; overflow:hidden;">
+<div data-flip-root style="position:fixed; inset:0; background:#ffffff; color:#111111; font-family:'Zen Kaku Gothic New',sans-serif; perspective:2200px; touch-action:none; overflow:hidden;">
 
   <!-- ===================== PAGE 0 · HERO ===================== -->
   <section data-page="0" data-bg="base" style="position:absolute; inset:0; transform-origin:left center; backface-visibility:hidden; -webkit-backface-visibility:hidden; will-change:transform; overflow:hidden; box-shadow:6px 0 20px rgba(0,0,0,0.14); background:#0E0E0E; display:flex; align-items:stretch; justify-content:center; padding:clamp(30px,6vw,64px) clamp(20px,5vw,64px);">
@@ -53,7 +53,7 @@
   </section>
 
   <!-- ===================== PAGE 1 · WORK 01 ===================== -->
-  <section data-page="1" data-bg="alt" style="position:absolute; inset:0; transform-origin:left center; backface-visibility:hidden; -webkit-backface-visibility:hidden; will-change:transform; overflow:hidden; box-shadow:6px 0 20px rgba(0,0,0,0.14); background:#F4F5F7; display:flex; align-items:stretch; justify-content:center; padding:clamp(30px,6vw,64px) clamp(20px,5vw,64px);">
+  <section data-page="1" data-bg="alt" style="position:absolute; inset:0; transform-origin:left center; backface-visibility:hidden; -webkit-backface-visibility:hidden; will-change:transform; overflow:hidden; box-shadow:6px 0 20px rgba(0,0,0,0.14); background:#ffffff; display:flex; align-items:stretch; justify-content:center; padding:clamp(30px,6vw,64px) clamp(20px,5vw,64px);">
     <div data-shine style="position:absolute; inset:0; opacity:0; pointer-events:none; z-index:5; background:linear-gradient(90deg, rgba(0,0,0,0.3), rgba(0,0,0,0) 40%);"></div>
     <div style="position:absolute; right:clamp(20px,5vw,64px); bottom:clamp(20px,5vw,54px); z-index:6; font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.6vw,13px); letter-spacing:0.2em; color:#8f8f8f; pointer-events:none;">02&nbsp;/&nbsp;05</div>
     <div data-inner style="width:100%; max-width:1080px; display:flex; flex-direction:column;">
@@ -108,7 +108,7 @@
   </section>
 
   <!-- ===================== PAGE 3 · WORK 03 ===================== -->
-  <section data-page="3" data-bg="alt" style="position:absolute; inset:0; transform-origin:left center; backface-visibility:hidden; -webkit-backface-visibility:hidden; will-change:transform; overflow:hidden; box-shadow:6px 0 20px rgba(0,0,0,0.14); background:#F4F5F7; display:flex; align-items:stretch; justify-content:center; padding:clamp(30px,6vw,64px) clamp(20px,5vw,64px);">
+  <section data-page="3" data-bg="alt" style="position:absolute; inset:0; transform-origin:left center; backface-visibility:hidden; -webkit-backface-visibility:hidden; will-change:transform; overflow:hidden; box-shadow:6px 0 20px rgba(0,0,0,0.14); background:#ffffff; display:flex; align-items:stretch; justify-content:center; padding:clamp(30px,6vw,64px) clamp(20px,5vw,64px);">
     <div data-shine style="position:absolute; inset:0; opacity:0; pointer-events:none; z-index:5; background:linear-gradient(90deg, rgba(0,0,0,0.3), rgba(0,0,0,0) 40%);"></div>
     <div style="position:absolute; right:clamp(20px,5vw,64px); bottom:clamp(20px,5vw,54px); z-index:6; font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.6vw,13px); letter-spacing:0.2em; color:#8f8f8f; pointer-events:none;">04&nbsp;/&nbsp;05</div>
     <div data-inner style="width:100%; max-width:1080px; display:flex; flex-direction:column;">
@@ -196,7 +196,7 @@ class Component extends DCLogic {
   applyTheme() {
     const p = this.props || {};
     const tone = p.bgTone || 'black';
-    const base = tone === 'charcoal' ? '#e9e9e7' : '#F4F5F7';
+    const base = tone === 'charcoal' ? '#e9e9e7' : '#ffffff';
     const alt = base;
     this.qsa('[data-bg="base"]').forEach((el) => { el.style.background = base; });
     this.qsa('[data-bg="alt"]').forEach((el) => { el.style.background = alt; });
