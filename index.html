@@ -19,6 +19,9 @@
   @keyframes pageLift { 0%{box-shadow:6px 0 20px rgba(0,0,0,0.14);} 50%{box-shadow:70px 0 100px rgba(0,0,0,0.28);} 100%{box-shadow:6px 0 20px rgba(0,0,0,0.14);} }
   @keyframes pageBrightness { 0%{filter:brightness(1);} 46%{filter:brightness(0.9);} 55%{filter:brightness(0.88);} 100%{filter:brightness(1);} }
   @keyframes pageCurl { 0%{transform:scaleY(1);} 50%{transform:scaleY(0.962);} 100%{transform:scaleY(1);} }
+  @media (max-width:600px) {
+    [data-poster-visual]{ width:100%; }
+  }
 </style>
 </helmet>
 
@@ -27,11 +30,11 @@
   <!-- ===================== PAGE 0 · POSTER ===================== -->
   <section data-page="1" data-bg="base" style="position:absolute; inset:0; transform-origin:left center; backface-visibility:hidden; -webkit-backface-visibility:hidden; will-change:transform; overflow:hidden; box-shadow:6px 0 20px rgba(0,0,0,0.14); background:#ffffff; display:flex; align-items:stretch; justify-content:center; padding:clamp(30px,6vw,64px) clamp(20px,5vw,64px);">
     <div data-shine style="position:absolute; inset:0; opacity:0; pointer-events:none; z-index:5; background:linear-gradient(90deg, rgba(0,0,0,0.3), rgba(0,0,0,0) 40%);"></div>
-    <div style="position:absolute; right:clamp(20px,5vw,64px); bottom:clamp(20px,5vw,54px); z-index:6; font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.6vw,13px); letter-spacing:0.2em; color:#8f8f8f; pointer-events:none;">02&nbsp;/&nbsp;06</div>
+    <div style="position:absolute; right:clamp(20px,5vw,64px); bottom:clamp(20px,5vw,54px); z-index:6; font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.6vw,13px); letter-spacing:0.2em; color:#8f8f8f; pointer-events:none;">02&nbsp;/&nbsp;07</div>
     <div data-inner style="width:100%; max-width:1080px; height:100%; display:flex; flex-direction:column;">
       <div data-reveal style="display:flex; justify-content:space-between; align-items:baseline; padding-bottom:clamp(10px,2vw,15px); border-bottom:1px solid rgba(0,0,0,0.16); font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.8vw,13px); letter-spacing:0.24em; text-transform:uppercase; color:#6b6b6b;"><span>Selected Work 1</span><span>2026.07</span></div>
       <div style="flex:1; min-height:0; display:flex; flex-wrap:wrap; gap:clamp(24px,4vw,52px); align-items:center; padding:clamp(18px,3.5vw,36px) 0;">
-        <div data-reveal data-d="80" style="flex:0 0 auto; display:flex; align-items:center; justify-content:center; min-height:0;">
+        <div data-reveal data-d="80" data-poster-visual style="flex:0 0 auto; display:flex; align-items:center; justify-content:center; min-height:0;">
           <div style="border:1px solid #111111; background:#ffffff; font-size:0;">
             <img src="images/poster-typography.png" alt="国際タイポグラフィー党 ポスター" style="display:block; height:min(50vh,620px); width:auto; max-width:100%; object-fit:contain;">
           </div>
@@ -48,14 +51,14 @@
   <!-- ===================== PAGE 1 · HERO ===================== -->
   <section data-page="0" data-bg="base" style="position:absolute; inset:0; transform-origin:left center; backface-visibility:hidden; -webkit-backface-visibility:hidden; will-change:transform; overflow:hidden; box-shadow:6px 0 20px rgba(0,0,0,0.14); background:#ffffff; display:flex; align-items:stretch; justify-content:center; padding:clamp(30px,6vw,64px) clamp(20px,5vw,64px);">
     <div data-shine style="position:absolute; inset:0; opacity:0; pointer-events:none; z-index:5; background:linear-gradient(90deg, rgba(0,0,0,0.3), rgba(0,0,0,0) 40%);"></div>
-    <div style="position:absolute; right:clamp(20px,5vw,64px); bottom:clamp(20px,5vw,54px); z-index:6; font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.6vw,13px); letter-spacing:0.2em; color:#8f8f8f; pointer-events:none;">01&nbsp;/&nbsp;06</div>
+    <div style="position:absolute; right:clamp(20px,5vw,64px); bottom:clamp(20px,5vw,54px); z-index:6; font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.6vw,13px); letter-spacing:0.2em; color:#8f8f8f; pointer-events:none;">01&nbsp;/&nbsp;07</div>
     <div data-inner style="width:100%; max-width:1080px; display:flex; flex-direction:column; justify-content:space-between;">
     <div data-reveal style="display:flex; justify-content:space-between; align-items:center; padding-bottom:clamp(12px,2vw,16px); border-bottom:2px solid #111111; font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.8vw,13px); letter-spacing:0.18em; color:#111111;">
       <span style="font-weight:700; letter-spacing:0.16em;">PORTFOLIO</span>
       <span style="letter-spacing:0.16em;">created at 2026</span>
     </div>
     <div data-reveal data-d="70" style="padding:clamp(20px,4vw,40px) 0;">
-      <div style="font-family:'Helvetica Neue',Arial,sans-serif; font-weight:700; font-size:clamp(11px,2.8vw,13px); letter-spacing:0.24em; text-transform:uppercase; color:#6b6b6b; margin-bottom:clamp(14px,3vw,22px);">Selected Works&nbsp;&nbsp;/&nbsp;&nbsp;04</div>
+      <div style="font-family:'Helvetica Neue',Arial,sans-serif; font-weight:700; font-size:clamp(11px,2.8vw,13px); letter-spacing:0.24em; text-transform:uppercase; color:#6b6b6b; margin-bottom:clamp(14px,3vw,22px);">Selected Works&nbsp;&nbsp;/&nbsp;&nbsp;05</div>
       <h1 style="margin:0; font-family:'Helvetica Neue',Arial,sans-serif; font-weight:800; font-size:clamp(58px,20vw,210px); line-height:0.82; letter-spacing:-0.055em;">AOGU</h1>
       <div style="margin-top:clamp(16px,3vw,26px); display:flex; align-items:baseline; gap:clamp(12px,3vw,22px); flex-wrap:wrap;">
         <span style="font-family:'Zen Kaku Gothic Antique',sans-serif; font-weight:900; font-size:clamp(18px,5vw,30px); letter-spacing:0.14em;">ポートフォリオ</span>
@@ -77,7 +80,7 @@
   <!-- ===================== PAGE 1 · WORK 01 ===================== -->
   <section data-page="2" data-bg="alt" style="position:absolute; inset:0; transform-origin:left center; backface-visibility:hidden; -webkit-backface-visibility:hidden; will-change:transform; overflow:hidden; box-shadow:6px 0 20px rgba(0,0,0,0.14); background:#ffffff; display:flex; align-items:stretch; justify-content:center; padding:clamp(30px,6vw,64px) clamp(20px,5vw,64px);">
     <div data-shine style="position:absolute; inset:0; opacity:0; pointer-events:none; z-index:5; background:linear-gradient(90deg, rgba(0,0,0,0.3), rgba(0,0,0,0) 40%);"></div>
-    <div style="position:absolute; right:clamp(20px,5vw,64px); bottom:clamp(20px,5vw,54px); z-index:6; font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.6vw,13px); letter-spacing:0.2em; color:#8f8f8f; pointer-events:none;">03&nbsp;/&nbsp;06</div>
+    <div style="position:absolute; right:clamp(20px,5vw,64px); bottom:clamp(20px,5vw,54px); z-index:6; font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.6vw,13px); letter-spacing:0.2em; color:#8f8f8f; pointer-events:none;">03&nbsp;/&nbsp;07</div>
     <div data-inner style="width:100%; max-width:1080px; height:100%; display:flex; flex-direction:column;">
       <div data-reveal style="display:flex; justify-content:space-between; align-items:baseline; padding-bottom:clamp(10px,2vw,15px); border-bottom:1px solid rgba(0,0,0,0.16); font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.8vw,13px); letter-spacing:0.24em; text-transform:uppercase; color:#6b6b6b;"><span>Selected Work 2</span><span>2026.04</span></div>
       <div style="flex:1; min-height:0; display:flex; flex-wrap:wrap; gap:clamp(24px,4vw,52px); align-items:center; padding:clamp(18px,3.5vw,36px) 0;">
@@ -97,12 +100,33 @@
     </div>
   </section>
 
-  <!-- ===================== PAGE 2 · WORK 02 ===================== -->
+  <!-- ===================== PAGE 2 · HARMONY ===================== -->
   <section data-page="3" data-bg="base" style="position:absolute; inset:0; transform-origin:left center; backface-visibility:hidden; -webkit-backface-visibility:hidden; will-change:transform; overflow:hidden; box-shadow:6px 0 20px rgba(0,0,0,0.14); background:#ffffff; display:flex; align-items:stretch; justify-content:center; padding:clamp(30px,6vw,64px) clamp(20px,5vw,64px);">
     <div data-shine style="position:absolute; inset:0; opacity:0; pointer-events:none; z-index:5; background:linear-gradient(90deg, rgba(0,0,0,0.3), rgba(0,0,0,0) 40%);"></div>
-    <div style="position:absolute; right:clamp(20px,5vw,64px); bottom:clamp(20px,5vw,54px); z-index:6; font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.6vw,13px); letter-spacing:0.2em; color:#8f8f8f; pointer-events:none;">04&nbsp;/&nbsp;06</div>
+    <div style="position:absolute; right:clamp(20px,5vw,64px); bottom:clamp(20px,5vw,54px); z-index:6; font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.6vw,13px); letter-spacing:0.2em; color:#8f8f8f; pointer-events:none;">04&nbsp;/&nbsp;07</div>
     <div data-inner style="width:100%; max-width:1080px; height:100%; display:flex; flex-direction:column;">
-      <div data-reveal style="display:flex; justify-content:space-between; align-items:baseline; padding-bottom:clamp(10px,2vw,15px); border-bottom:1px solid rgba(0,0,0,0.16); font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.8vw,13px); letter-spacing:0.24em; text-transform:uppercase; color:#6b6b6b;"><span>Selected Work 3</span><span>2026.05</span></div>
+      <div data-reveal style="display:flex; justify-content:space-between; align-items:baseline; padding-bottom:clamp(10px,2vw,15px); border-bottom:1px solid rgba(0,0,0,0.16); font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.8vw,13px); letter-spacing:0.24em; text-transform:uppercase; color:#6b6b6b;"><span>Selected Work 3</span><span>2026</span></div>
+      <div style="flex:1; min-height:0; display:flex; flex-wrap:wrap; gap:clamp(24px,4vw,52px); align-items:center; padding:clamp(18px,3.5vw,36px) 0;">
+        <div data-reveal data-d="80" data-poster-visual style="flex:0 0 auto; display:flex; align-items:center; justify-content:center; min-height:0;">
+          <div style="border:1px solid #111111; background:#ffffff; font-size:0;">
+            <img src="images/harmony_2.jpg" alt="Harmony ポスター" style="display:block; height:min(50vh,620px); width:auto; max-width:100%; object-fit:contain;">
+          </div>
+        </div>
+        <div data-reveal data-d="150" style="flex:1 1 300px; min-width:min(260px,100%);">
+          <h2 style="margin:0; font-family:'Zen Kaku Gothic Antique',sans-serif; font-weight:900; font-size:clamp(24px,5vw,40px); line-height:1.22; letter-spacing:0.02em;">Harmony</h2>
+          <p style="margin:clamp(14px,2.5vw,20px) 0 0; max-width:500px; font-size:clamp(12px,2.8vw,15px); line-height:1.85; color:#4a4a4a;">Harmonyという単語には、Harm on y(ou)（あなたへの危害）という言葉が隠されている。本作品では、現実世界において調和が保たれる一方、その裏では都合の悪い危害が隠蔽されることがあるという構造に着目した。本ポスター内にあるトンボに沿って裁断すると、不都合なメッセージが切り落とされる。裁断という印刷工程を利用して、不都合な事実を見えなくする現象を再現し、社会のあり方を批評した。</p>
+        </div>
+      </div>
+      <div data-reveal data-d="220" style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:8px 14px; padding-top:clamp(10px,2vw,15px); border-top:1px solid rgba(0,0,0,0.16); font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.6vw,13px); color:#9a9a9a;"><span style="letter-spacing:0.2em; text-transform:uppercase; color:#9a9a9a; font-size:clamp(9px,2.2vw,11px);">Illustrator</span></div>
+    </div>
+  </section>
+
+  <!-- ===================== PAGE 3 · WORK 03 ===================== -->
+  <section data-page="4" data-bg="base" style="position:absolute; inset:0; transform-origin:left center; backface-visibility:hidden; -webkit-backface-visibility:hidden; will-change:transform; overflow:hidden; box-shadow:6px 0 20px rgba(0,0,0,0.14); background:#ffffff; display:flex; align-items:stretch; justify-content:center; padding:clamp(30px,6vw,64px) clamp(20px,5vw,64px);">
+    <div data-shine style="position:absolute; inset:0; opacity:0; pointer-events:none; z-index:5; background:linear-gradient(90deg, rgba(0,0,0,0.3), rgba(0,0,0,0) 40%);"></div>
+    <div style="position:absolute; right:clamp(20px,5vw,64px); bottom:clamp(20px,5vw,54px); z-index:6; font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.6vw,13px); letter-spacing:0.2em; color:#8f8f8f; pointer-events:none;">05&nbsp;/&nbsp;07</div>
+    <div data-inner style="width:100%; max-width:1080px; height:100%; display:flex; flex-direction:column;">
+      <div data-reveal style="display:flex; justify-content:space-between; align-items:baseline; padding-bottom:clamp(10px,2vw,15px); border-bottom:1px solid rgba(0,0,0,0.16); font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.8vw,13px); letter-spacing:0.24em; text-transform:uppercase; color:#6b6b6b;"><span>Selected Work 4</span><span>2026.05</span></div>
       <div style="flex:1; min-height:0; display:flex; flex-wrap:wrap; gap:clamp(24px,4vw,52px); align-items:center; padding:clamp(18px,3.5vw,36px) 0;">
         <div data-reveal data-d="80" style="flex:1.4 1 360px; min-width:min(280px,100%); display:flex; align-items:center; justify-content:center; min-height:0;">
           <div style="border:1px solid #111111; background:#ffffff; width:100%; font-size:0;">
@@ -124,11 +148,11 @@
   </section>
 
   <!-- ===================== PAGE 3 · WORK 03 ===================== -->
-  <section data-page="4" data-bg="alt" style="position:absolute; inset:0; transform-origin:left center; backface-visibility:hidden; -webkit-backface-visibility:hidden; will-change:transform; overflow:hidden; box-shadow:6px 0 20px rgba(0,0,0,0.14); background:#ffffff; display:flex; align-items:stretch; justify-content:center; padding:clamp(30px,6vw,64px) clamp(20px,5vw,64px);">
+  <section data-page="5" data-bg="alt" style="position:absolute; inset:0; transform-origin:left center; backface-visibility:hidden; -webkit-backface-visibility:hidden; will-change:transform; overflow:hidden; box-shadow:6px 0 20px rgba(0,0,0,0.14); background:#ffffff; display:flex; align-items:stretch; justify-content:center; padding:clamp(30px,6vw,64px) clamp(20px,5vw,64px);">
     <div data-shine style="position:absolute; inset:0; opacity:0; pointer-events:none; z-index:5; background:linear-gradient(90deg, rgba(0,0,0,0.3), rgba(0,0,0,0) 40%);"></div>
-    <div style="position:absolute; right:clamp(20px,5vw,64px); bottom:clamp(20px,5vw,54px); z-index:6; font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.6vw,13px); letter-spacing:0.2em; color:#8f8f8f; pointer-events:none;">05&nbsp;/&nbsp;06</div>
+    <div style="position:absolute; right:clamp(20px,5vw,64px); bottom:clamp(20px,5vw,54px); z-index:6; font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.6vw,13px); letter-spacing:0.2em; color:#8f8f8f; pointer-events:none;">06&nbsp;/&nbsp;07</div>
     <div data-inner style="width:100%; max-width:1080px; height:100%; display:flex; flex-direction:column;">
-      <div data-reveal style="display:flex; justify-content:space-between; align-items:baseline; padding-bottom:clamp(10px,2vw,15px); border-bottom:1px solid rgba(0,0,0,0.16); font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.8vw,13px); letter-spacing:0.24em; text-transform:uppercase; color:#6b6b6b;"><span>Selected Work 4</span><span>2026.06</span></div>
+      <div data-reveal style="display:flex; justify-content:space-between; align-items:baseline; padding-bottom:clamp(10px,2vw,15px); border-bottom:1px solid rgba(0,0,0,0.16); font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.8vw,13px); letter-spacing:0.24em; text-transform:uppercase; color:#6b6b6b;"><span>Selected Work 5</span><span>2026.06</span></div>
       <div style="flex:1; min-height:0; display:flex; flex-wrap:wrap; gap:clamp(24px,4vw,52px); align-items:center; padding:clamp(18px,3.5vw,36px) 0;">
         <div data-reveal data-d="80" style="flex:1.4 1 360px; min-width:min(280px,100%); display:flex; align-items:center; justify-content:center; min-height:0;">
           <div style="border:1px solid #111111; background:#ffffff; width:100%; font-size:0;">
@@ -147,9 +171,9 @@
   </section>
 
   <!-- ===================== PAGE 4 · FOOTER ===================== -->
-  <section data-page="5" data-bg="base" style="position:absolute; inset:0; transform-origin:left center; backface-visibility:hidden; -webkit-backface-visibility:hidden; will-change:transform; overflow:hidden; box-shadow:6px 0 20px rgba(0,0,0,0.14); background:#ffffff; display:flex; align-items:stretch; justify-content:center; padding:clamp(30px,6vw,64px) clamp(20px,5vw,64px);">
+  <section data-page="6" data-bg="base" style="position:absolute; inset:0; transform-origin:left center; backface-visibility:hidden; -webkit-backface-visibility:hidden; will-change:transform; overflow:hidden; box-shadow:6px 0 20px rgba(0,0,0,0.14); background:#ffffff; display:flex; align-items:stretch; justify-content:center; padding:clamp(30px,6vw,64px) clamp(20px,5vw,64px);">
     <div data-shine style="position:absolute; inset:0; opacity:0; pointer-events:none; z-index:5; background:linear-gradient(90deg, rgba(0,0,0,0.3), rgba(0,0,0,0) 40%);"></div>
-    <div style="position:absolute; right:clamp(20px,5vw,64px); bottom:clamp(20px,5vw,54px); z-index:6; font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.6vw,13px); letter-spacing:0.2em; color:#8f8f8f; pointer-events:none;">06&nbsp;/&nbsp;06</div>
+    <div style="position:absolute; right:clamp(20px,5vw,64px); bottom:clamp(20px,5vw,54px); z-index:6; font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.6vw,13px); letter-spacing:0.2em; color:#8f8f8f; pointer-events:none;">07&nbsp;/&nbsp;07</div>
     <div data-inner style="width:100%; max-width:1080px; display:flex; flex-direction:column;">
       <div data-reveal style="display:flex; justify-content:space-between; align-items:baseline; padding-bottom:clamp(12px,2vw,16px); border-bottom:1px solid rgba(0,0,0,0.16); font-family:'Helvetica Neue',Arial,sans-serif; font-size:clamp(11px,2.8vw,13px); letter-spacing:0.24em; text-transform:uppercase; color:#6b6b6b;">
         <span>Profile</span>
